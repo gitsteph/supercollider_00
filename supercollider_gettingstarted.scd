@@ -10,6 +10,7 @@
 "Hello World!".postln;
 "Hello Jimmy!".postln;
 )
+
 Server.local.boot;  // equivalent to s.boot;
 { [SinOsc.ar(440, 0, 0.2), SinOsc.ar(442, 0, 0.9)] }.play;
 
@@ -27,18 +28,19 @@ f.value;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // 05. Functions and Sound
 (
-{ var ampOsc;
-    ampOsc = SinOsc.kr(0.5, 1.5pi, 0.5, 0.5);
-    SinOsc.ar(440, 0, ampOsc);
+{
+	var ampOsc;
+	ampOsc = SinOsc.kr(0.5, 1.5pi, 0.5, 0.5);
+	SinOsc.ar(440, 0, ampOsc);
 }.play;
 )
 
 { [SinOsc.ar(440, 0, 0.2), SinOsc.ar(442, 0, 0.2)] }.play;
 
 g = {
-	var freq;
-	freq = [[660, 880], [440, 660], 1320, 880].choose;
-	freq.postln;
+    var freq;
+    freq = [[660, 880], [440, 660], 1320, 880].choose;
+    freq.postln;
 };
 g.value;
 
